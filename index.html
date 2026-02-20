@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Web Chess</title>
-    
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
     <!-- SEO & Meta -->
     <meta name="description" content="A modern, beautiful web-based chess game playing against an AI bot.">
-    
+
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body data-theme="dark">
     <div class="app-container">
         <!-- Sidebar / Controls -->
@@ -36,7 +39,8 @@
             <div class="control-group">
                 <label>Play As</label>
                 <div class="button-group" id="side-selector">
-                    <button class="btn btn-outline active" data-value="w"><i class="fa-regular fa-chess-king"></i> White</button>
+                    <button class="btn btn-outline active" data-value="w"><i class="fa-regular fa-chess-king"></i>
+                        White</button>
                     <button class="btn btn-outline" data-value="b"><i class="fa-solid fa-chess-king"></i> Black</button>
                 </div>
             </div>
@@ -60,7 +64,7 @@
                 <span class="status-indicator active"></span>
                 <span id="status-text">Your turn (White)</span>
             </div>
-            
+
             <div id="share-container" class="share-box hidden">
                 <h3>You Won! 🎉</h3>
                 <button id="share-twitter-btn" class="btn btn-social twitter">
@@ -88,4 +92,5 @@
     <!-- Custom Logic -->
     <script src="app.js"></script>
 </body>
+
 </html>
