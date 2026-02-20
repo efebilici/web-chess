@@ -1,6 +1,6 @@
 # Web Chess
 
-**[🚀 Play the Live Demo Here!](https://web-chess-demo.wasmer.app)**
+**<a href="https://web-chess-demo.wasmer.app" target="_blank">🚀 Play the Live Demo Here!</a>**
 
 A fully functional, responsive, and beautiful web-based chess game built with vanilla HTML, CSS, and JavaScript. Play against the powerful Stockfish AI directly in your browser.
 
