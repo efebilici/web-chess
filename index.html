@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Chess</title>
+    
+    <!-- SEO & Meta -->
+    <meta name="description" content="A modern, beautiful web-based chess game playing against an AI bot.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+    <div class="app-container">
+        <!-- Sidebar / Controls -->
+        <aside class="sidebar">
+            <header>
+                <h1>Web Chess</h1>
+                <p>Play against Stockfish AI</p>
+            </header>
+
+            <div class="control-group">
+                <label>Difficulty</label>
+                <div class="button-group" id="difficulty-selector">
+                    <button class="btn btn-outline" data-value="easy">Easy</button>
+                    <button class="btn btn-outline active" data-value="medium">Medium</button>
+                    <button class="btn btn-outline" data-value="hard">Hard</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Play As</label>
+                <div class="button-group" id="side-selector">
+                    <button class="btn btn-outline active" data-value="w"><i class="fa-regular fa-chess-king"></i> White</button>
+                    <button class="btn btn-outline" data-value="b"><i class="fa-solid fa-chess-king"></i> Black</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Theme</label>
+                <select id="theme-selector" class="dropdown">
+                    <option value="dark">Dark Theme</option>
+                    <option value="light">Light Theme</option>
+                    <option value="blue">Blue Glass</option>
+                    <option value="red">Ruby</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <button id="new-game-btn" class="btn btn-primary"><i class="fa-solid fa-play"></i> New Game</button>
+                <button id="hint-btn" class="btn btn-secondary"><i class="fa-solid fa-lightbulb"></i> Hint</button>
+            </div>
+
+            <div id="game-status" class="status-box">
+                <span class="status-indicator active"></span>
+                <span id="status-text">Your turn (White)</span>
+            </div>
+            
+            <div id="share-container" class="share-box hidden">
+                <h3>You Won! 🎉</h3>
+                <button id="share-twitter-btn" class="btn btn-social twitter">
+                    <i class="fa-brands fa-x-twitter"></i> Share on X
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Game Area -->
+        <main class="game-area">
+            <div class="board-container">
+                <div id="chessboard" class="chessboard">
+                    <!-- Squares generated via JS -->
+                </div>
+                <!-- Coordinates Overlay -->
+                <div class="coords x-coords"></div>
+                <div class="coords y-coords"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Libraries -->
+    <!-- Using older but highly stable version of chess.js via CDN for vanilla JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <!-- Custom Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
